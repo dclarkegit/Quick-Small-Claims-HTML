@@ -1,6 +1,50 @@
+body{
+  font-family: 'Roboto', sans-serif;
+}
 
+.selected-link, .selected-link:hover{
+ color: #45bce5;
+ fill: #45bce5;
+}
 
-  .bi {
-    vertical-align: -.125em;
-    fill: currentColor;
-  }
+.background-allstate-blue{
+  background-color: #0033a0;
+}
+
+.background-allstate-blue-faded{
+  background-color:white; 
+  color:#0033a071;
+}
+
+.text-allstate-blue, text-allstate-blue:link, text-allstate-blue:hover {
+  color: #0033a0;
+}
+
+.bi {
+  vertical-align: -.125em;
+  fill: currentColor;
+}
+
+.display-none{
+  display:none;
+}
+
+.btn-allstate-blue{
+  background-color: #0033a0;
+  color: white;
+}
+
+.btn-allstate-blue:hover{
+  background-color: #45bce5;
+  color: white;
+}
+
+.claim-table a{
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.claim-table a:hover{
+  color: gray;
+}

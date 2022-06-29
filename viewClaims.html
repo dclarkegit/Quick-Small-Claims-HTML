@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Quicker Small Claims - View Claims</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Diarmuid Clarke">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+        <link href="./css/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <link href="./css/style.css" rel="stylesheet" type="text/css">
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+    </head>
+    <body>
+        <svg xmlns="http://www.w3.org/2000/svg" class="display-none">
+            <symbol id="home" viewBox="0 0 16 16">
+              <title>Home</title>
+              <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z"/>
+            </symbol>
+            <symbol id="people-circle" viewBox="0 0 16 16">
+              <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+              <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+            </symbol>
+            <symbol id="grid" viewBox="0 0 16 16">
+              <path d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z"/>
+            </symbol>
+            <symbol id="newclaim" viewBox="0 0 16 16">
+                <path d="m.5 3 .04.87a1.99 1.99 0 0 0-.342 1.311l.637 7A2 2 0 0 0 2.826 14H9v-1H2.826a1 1 0 0 1-.995-.91l-.637-7A1 1 0 0 1 2.19 4h11.62a1 1 0 0 1 .996 1.09L14.54 8h1.005l.256-2.819A2 2 0 0 0 13.81 3H9.828a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 6.172 1H2.5a2 2 0 0 0-2 2zm5.672-1a1 1 0 0 1 .707.293L7.586 3H2.19c-.24 0-.47.042-.683.12L1.5 2.98a1 1 0 0 1 1-.98h3.672z"/>
+                <path d="M13.5 10a.5.5 0 0 1 .5.5V12h1.5a.5.5 0 1 1 0 1H14v1.5a.5.5 0 1 1-1 0V13h-1.5a.5.5 0 0 1 0-1H13v-1.5a.5.5 0 0 1 .5-.5z"/>
+            </symbol>            
+            <symbol id="tasks" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3.854 2.146a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 3.293l1.146-1.147a.5.5 0 0 1 .708 0zm0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 7.293l1.146-1.147a.5.5 0 0 1 .708 0zm0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 0 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0z"/>
+            </symbol>
+            <symbol id="motor" viewBox="0 0 24 24">
+                <path d="M23.5 7c.276 0 .5.224.5.5v.511c0 .793-.926.989-1.616.989l-1.086-2h2.202zm-1.441 3.506c.639 1.186.946 2.252.946 3.666 0 1.37-.397 2.533-1.005 3.981v1.847c0 .552-.448 1-1 1h-1.5c-.552 0-1-.448-1-1v-1h-13v1c0 .552-.448 1-1 1h-1.5c-.552 0-1-.448-1-1v-1.847c-.608-1.448-1.005-2.611-1.005-3.981 0-1.414.307-2.48.946-3.666.829-1.537 1.851-3.453 2.93-5.252.828-1.382 1.262-1.707 2.278-1.889 1.532-.275 2.918-.365 4.851-.365s3.319.09 4.851.365c1.016.182 1.45.507 2.278 1.889 1.079 1.799 2.101 3.715 2.93 5.252zm-16.059 2.994c0-.828-.672-1.5-1.5-1.5s-1.5.672-1.5 1.5.672 1.5 1.5 1.5 1.5-.672 1.5-1.5zm10 1c0-.276-.224-.5-.5-.5h-7c-.276 0-.5.224-.5.5s.224.5.5.5h7c.276 0 .5-.224.5-.5zm2.941-5.527s-.74-1.826-1.631-3.142c-.202-.298-.515-.502-.869-.566-1.511-.272-2.835-.359-4.441-.359s-2.93.087-4.441.359c-.354.063-.667.267-.869.566-.891 1.315-1.631 3.142-1.631 3.142 1.64.313 4.309.497 6.941.497s5.301-.184 6.941-.497zm2.059 4.527c0-.828-.672-1.5-1.5-1.5s-1.5.672-1.5 1.5.672 1.5 1.5 1.5 1.5-.672 1.5-1.5zm-18.298-6.5h-2.202c-.276 0-.5.224-.5.5v.511c0 .793.926.989 1.616.989l1.086-2z"/>
+            </symbol>
+            <symbol id="pet" viewBox="0 0 24 24">            
+                <path d="M11.954 11c3.33 0 7.057 6.123 7.632 8.716.575 2.594-.996 4.729-3.484 4.112-1.092-.271-3.252-1.307-4.102-1.291-.925.016-2.379.836-3.587 1.252-2.657.916-4.717-1.283-4.01-4.073.774-3.051 4.48-8.716 7.551-8.716zm10.793-4.39c1.188.539 1.629 2.82.894 5.27-.704 2.341-2.33 3.806-4.556 2.796-1.931-.877-2.158-3.178-.894-5.27 1.274-2.107 3.367-3.336 4.556-2.796zm-21.968.706c-1.044.729-1.06 2.996.082 5.215 1.092 2.12 2.913 3.236 4.868 1.87 1.696-1.185 1.504-3.433-.082-5.215-1.596-1.793-3.824-2.599-4.868-1.87zm15.643-7.292c1.323.251 2.321 2.428 2.182 5.062-.134 2.517-1.405 4.382-3.882 3.912-2.149-.407-2.938-2.657-2.181-5.061.761-2.421 2.559-4.164 3.881-3.913zm-10.295.058c-1.268.451-1.92 2.756-1.377 5.337.519 2.467 2.062 4.114 4.437 3.269 2.06-.732 2.494-3.077 1.377-5.336-1.125-2.276-3.169-3.721-4.437-3.27z"/>
+            </symbol>
+        </svg>
+
+          <div class="px-3 py-2 text-dark background-allstate-blue">
+                <div class="container">
+                    <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                        <a href="index.html" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none font-weight-bold">
+                            <img src="./resources/Allstate Logo.svg" alt="Allstate" /> &nbsp; Quicker Small Claims
+                        </a>                                      
+                        <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
+                            <li>
+                            <a href="index.html" class="nav-link text-white">
+                                <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#home"/></svg>
+                                Home
+                            </a>
+                            </li>
+                            <li>
+                            <a href="newClaim.html" class="nav-link text-white">
+                                <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#newclaim"/></svg>
+                                New Claim                               
+                            </a>
+                            </li> 
+                            <li>
+                            <a href="viewClaims.html" class="nav-link selected-link">
+                                <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#grid"/></svg>
+                                View Claims
+                            </a>
+                            </li>
+                            <li>
+                            <a href="userProfile.html" class="nav-link text-white">
+                                <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#people-circle"/></svg>
+                                Log in
+                            </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="px-3 py-2 border-bottom mb-1 background-allstate-blue">
+                <div class="container d-flex flex-wrap justify-content-center">
+                    <form class="col-12 col-lg-auto mb-2 mb-lg-0 me-lg-auto" role="search">
+                        <div class="row text-white">
+                            <div class="col-sm-4 mb-1">
+                                <input type="search" class="form-control" placeholder="Search Claims..."> 
+                            </div>
+                            <div class="col-sm-8">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inputSearchType" id="optionClaimID" value="claimID" checked>
+                                    <label class="form-check-label" for="optionClaimID"> Claim ID</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inputSearchType" id="optionPolicyNumber" value="policyNumber">
+                                    <label class="form-check-label" for="optionPolicyNumber"> Policy Number</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inputSearchType" id="optionSurname" value="surname">
+                                    <label class="form-check-label" for="optionSurname"> Surname</label>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="container my-1" >
+                <div class="row p-1 pb-0 pe-lg-0 pt-lg-2 align-items-center rounded-3 border shadow-sm background-allstate-blue">
+                  <div class="col-lg-12 p-1 p-lg-2 pt-lg-1 text-white" >                    
+                    <h5>View Claims</h5>
+                  </div>
+                </div>
+            </div>
+            <div class="container my-1" >
+                <div class="row p-1 pb-0 pe-lg-0 pt-lg-3 align-items-center rounded-3 border shadow-sm">
+                    <div class="col-lg-1 col-2 mb-4">
+                        <label for="selectClaimStatus" class="form-label">Filter by: </label>
+                    </div>
+                    <div class="col-lg-3 col-4 mb-4">
+                        <select class="form-select" id="selectClaimStatus" name="selectClaimStatus">
+                            <option value="0" selected>-- All Claim Status --</option>
+                            <option value="1">Awaiting Assessment</option>
+                            <option value="2">In Progress</option>  
+                            <option value="3">Awaiting Payment</option>
+                            <option value="4">Accepted & Paid</option>  
+                            <option value="5">Transferred to Main Claims</option>
+                            <option value="6">Rejected</option>
+                        </select>                          
+                    </div>
+                    <div class="col-lg-3 col-4 mb-4">
+                        <select class="form-select" id="selectPolicyType" name="selectPolicyType">
+                            <option value="0" selected>-- All Types --</option>
+                            <option value="1">Motor</option>
+                            <option value="2">Pet</option>  
+                            <option value="3">Property</option>
+                        </select>                          
+                    </div>
+                    <table class="table claim-table">
+                        <thead>
+                            <tr class="table-light">
+                                <th scope="col">Claim #</th>
+                                <th scope="col">Start Date</th>                                
+                                <th scope="col">Policy #</th>
+                                <th scope="col">Type</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Status</th>
+                                <th scope="col">Tasks</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                          <tr class="table-success">
+                            <td><a href="./editClaim.html" target="_blank">5674567890</a></td>
+                            <td>04/05/21 09:03:21</td>                            
+                            <td>4264517890</td>
+                            <td title="Pet"><svg width="24" height="24">Pet <use xlink:href="#pet"/></svg></td>
+                            <td>John Doe</td>
+                            <td>Accepted & Paid</td> 
+                            <td>6</td>                              
+                          </tr>
+                          <tr class="table-warning">
+                            <td><a href="./editClaim.html" target="_blank">7894567890</a></td>
+                            <td>21/09/22 09:44:21</td>                            
+                            <td>1788936723</td>
+                            <td title="Motor"><svg width="24" height="24" alt="Motor">Motor <use xlink:href="#motor"/></svg></td>
+                            <td>Jill Doe</td>
+                            <td>In Progress</td> 
+                            <td title="1 open task" class="text-danger">2</td>                            
+                          </tr>
+                          <tr class="table-success">
+                            <td><a href="./editClaim.html" target="_blank">1234567565</a></td>
+                            <td>21/09/22 09:44:21</td>                            
+                            <td>4788936723</td>
+                            <td title="Property"><svg width="24" height="24" alt="Property">Property <use xlink:href="#home"/></svg></td>
+                            <td>Tom Jones</td>
+                            <td>Transferred</td>
+                            <td>0</td>                              
+                          </tr>
+                          <tr class="table-danger">
+                            <td><a href="./editClaim.html" target="_blank">6665678901</a></td>
+                            <td>21/09/22 09:44:21</td>                            
+                            <td>9788936723</td>
+                            <td title="Motor"><svg width="24" height="24" alt="Motor">Motor <use xlink:href="#motor"/></svg></td>
+                            <td>Jill Doe</td>
+                            <td>Awaiting Assessment</td>
+                            <td>0</td>                              
+                          </tr>
+                          <tr class="table-success">
+                            <td ><a href="./editClaim.html" target="_blank">5774567861</a></td>
+                            <td>21/09/22 09:44:21</td>                            
+                            <td>1788936723</td>
+                            <td title="Property"><svg width="24" height="24" alt="Property">Property <use xlink:href="#home"/></svg></td>
+                            <td>Michael Surname</td>
+                            <td>Rejected</td> 
+                            <td>0</td>                            
+                          </tr>
+                        </tbody>
+                    </table>
+              </div>
+            </div>
+        <div class="text-center p-4 background-allstate-blue-faded">
+            © 2022 Copyright: Allstate
+        </div>
+    </body>
+</html>

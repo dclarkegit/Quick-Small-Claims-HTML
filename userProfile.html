@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Quicker Small Claims - New Claim</title>
+        <title>Quicker Small Claims - User Profile</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="author" content="Diarmuid Clarke">
@@ -54,7 +54,7 @@
                             </a>
                             </li>
                             <li>
-                            <a href="newClaim.html" class="nav-link selected-link">
+                            <a href="newClaim.html" class="nav-link text-white">
                                 <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#newclaim"/></svg>
                                 New Claim                               
                             </a>
@@ -66,9 +66,9 @@
                             </a>
                             </li>
                             <li>
-                            <a href="userProfile.html" class="nav-link text-white">
+                            <a href="userProfile.html" class="nav-link selected-link">
                                 <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#people-circle"/></svg>
-                                Log in
+                                User
                             </a>
                             </li>
                         </ul>
@@ -100,109 +100,92 @@
                     </form>
                 </div>
             </div>
-            <div class="container my-1" >
+            <div class="container mb-0 mt-3" >
                 <div class="row p-1 pb-0 pe-lg-0 pt-lg-2 align-items-center rounded-3 border shadow-sm background-allstate-blue">
                   <div class="col-lg-12 p-1 p-lg-2 pt-lg-1 text-white" >                    
-                    <h5>New Claim</h5>
+                    <h5>Log in</h5>
                   </div>
                 </div>
             </div>
             <div class="container my-1" >
-                <div class="row p-1 pb-0 pe-lg-0 pt-lg-2 align-items-center rounded-3 border shadow-lg">                 
-                    <form action="newClaim.html" method="POST" class="row">
-                        <div class="row gx-3 gy-2">
-                            <div class="col-md-6">
-                                <label for="inputInsuranceType" class="form-label">Insurance Type</label> <br />
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="inputInsuranceType" id="optionProperty" value="property" required>
-                                    <label class="form-check-label" for="optionProperty"><svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#home"/></svg> Property</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="inputInsuranceType" id="optionMotor" value="motor" required>
-                                    <label class="form-check-label" for="optionMotor"><svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#motor"/></svg> Motor</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="inputInsuranceType" id="optionPet" value="pet" required>
-                                    <label class="form-check-label" for="optionPet"><svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#pet"/></svg> Pet</label>
-                                </div>
-                            </div>
+                <div class="row p-1 pb-2 pe-lg-0 pt-lg-3 align-items-center rounded-3 border shadow-sm">
+                    <form>
+                        <div class="form-group">
+                            <label for="inputUserName">User Name</label>
+                            <input type="email" class="form-control col-4" id="inputUserName" name="inputUserName" placeholder="Enter NTID">
                         </div>
-                        <div class="row gx-3 gy-2">
-                            <div class="col-md-6">
-                                <label for="inputPolicyNumber" class="form-label">Policy Number</label>
-                                <input type="number" class="form-control" id="inputPolicyNumber" name="inputPolicyNumber" maxlength="8" max="9999999999" placeholder="i.e. 10 digit number" required />
-                            </div>
+                        <div class="form-group  mt-2">
+                            <label for="inputPassword">Password</label>
+                            <input type="password" class="form-control" id="inputPassword" name="inputPassword" placeholder="Password">
                         </div>
-                        <div class="row gx-3 gy-2">
-                            <div class="col-md-6">
-                                <label for="inputFirstName" class="form-label">Customer First Name</label>
-                                <input type="text" class="form-control" id="inputFirstName" name="inputFirstName" placeholder="First Name" required />
-                            </div>
-                            <div class="col-md-6">
-                                <label for="inputSurname" class="form-label">Customer Surname</label>
-                                <input type="text" class="form-control" id="inputSurname" name="inputSurname" placeholder="Surname" required />
-                            </div>
+                        <div class="form-group  mt-3">
+                            <button type="submit" class="btn btn-primary">Log in</button>
                         </div>
-                        <div class="row gx-3 gy-2">
+                    </form>
+                </div>
+            </div>
+            <div class="container my-1" >
+                <div class="row p-1 pb-0 pe-lg-0 pt-lg-2 align-items-center rounded-3 border shadow-sm background-allstate-blue">
+                  <div class="col-lg-12 p-1 p-lg-2 pt-lg-1 text-white" >                    
+                    <h5>User Profile</h5>
+                  </div>
+                </div>
+            </div>
+            <div class="container my-1" >
+                <div class="row p-1 pb-0 pe-lg-0 pt-lg-3 align-items-center rounded-3 border shadow-sm">
+                        <div class="row gx-3 gy-2 mb-3">
                             <div class="col-md-4">
-                                <label for="inputClaimDate" class="form-label">Claim Start Date</label>
-                                <input type="date" class="form-control" id="inputClaimDate" name="" required />
-                            </div>                            
-                             <div class="col-md-4">
-                                <label for="inputClaimAmount" class="form-label">Estimated Claim Value</label>
-                                <input type="number" class="form-control" id="inputClaimAmount" name="inputClaimAmount" placeholder="$0.00"  required />
-                            </div>
-                        </div>
-                        <div class="row gx-3 gy-2">
-                            <div class="col-md-12">
-                                <label for="inputClaimReason" class="form-label">Claim Reason</label>
-                                <input type="text" class="form-control" id="inputClaimReason" name="inputClaimReason" placeholder="Reason for the claim" required />
-                            </div>
-                        </div>
-                        <div class="row gx-3 gy-2">
-                            <div class="col-md-12">
-                                <label for="inputIncidentDescription" class="form-label">Incident Description</label>  
-                                <textarea class="form-control" id="inputIncidentDescription" name="inputIncidentDescription" rows="4" placeholder="Description of the incident leading to the claim" required ></textarea>
-                            </div>
-                        </div>
-                        <div id="divPropertyFields" class="row gx-3 gy-2">
-                            <div class="col-md-12">
-                                <label for="inputAffectedAddress" class="form-label">Affeced Address <span class="text-muted">(Property field)</span></label>  
-                                <textarea class="form-control" id="inputAffectedAddress" name="inputAffectedAddress" rows="4" placeholder="Address of property affected" required ></textarea>
-                            </div>
-                        </div>
-                        <div id="divMotorFields" class="row gx-3 gy-2">
-                            <div class="col-md-4">
-                                <label for="inputVehicleMake" class="form-label">Make <span class="text-muted">(Motor field)</span></label>
-                                <input type="text" class="form-control" id="inputVehicleMake" name="inputVehicleMake" placeholder="Vehicle Make"  />
+                                <label for="inputUserName" class="form-label">User Name</label>
+                                <input type="text" class="form-control" id="inputUserName" name="inputUserName" value="John Doe" disabled />                                
                             </div>
                             <div class="col-md-4">
-                                <label for="inputVehicleModel" class="form-label">Model <span class="text-muted">(Motor field)</span></label>
-                                <input type="text" class="form-control" id="inputVehicleModel" name="inputVehicleModel" placeholder="Vehicle Model"  />
+                                <label for="inputUserDepartment" class="form-label">User Department</label>
+                                <input type="text" class="form-control" id="inputUserDepartment" name="inputUserDepartment" value="Quick Claims" disabled />                                
                             </div>
-                            <div class="col-md-4">
-                                <label for="inputVehicleYear" class="form-label">Year <span class="text-muted">(Motor field)</span></label>
-                                <input type="number" class="form-control" id="inputMotorMake" name="inputMotorMake" min="1900" max="2099" />
-                            </div>
-                        </div>
-                        <div id="divPetFields" class="row gx-3 gy-2">
-                            <div class="col-md-6">
-                                <label for="inputAnimalType" class="form-label">Animal Type <span class="text-muted">(Pet field)</span></label>
-                                <input type="text" class="form-control" id="inputAnimalType" name="inputAnimalType" placeholder="Type of Animal"  />
-                            </div>
-                            <div class="col-md-6">
-                                <label for="inputAnimalBreed" class="form-label">Animal Breed <span class="text-muted">(Pet field)</span></label>
-                                <input type="text" class="form-control" id="inputAnimalBreed" name="inputAnimalBreed" placeholder="Breed of Animal"  />
-                            </div>
-                        </div>
-                        <div class="row gx-3 gy-2 pb-5">
-                            <div class="col-6">
-                                <div class="col-12">
-                                    <button type="submit" class="btn btn-allstate-blue">Create Claim</button>
-                                </div>
-                            </div>
-                        </div>
-                    </form>              
+                        </div>                        
+              </div>
+            </div>
+            <div class="container mb-0 mt-3" >
+                <div class="row p-1 pb-0 pe-lg-0 pt-lg-2 align-items-center rounded-3 border shadow-sm background-allstate-blue">
+                  <div class="col-lg-12 p-1 p-lg-2 pt-lg-1 text-white" >                    
+                    <h5>Tasks</h5>
+                  </div>
+                </div>
+            </div>
+            <div class="container my-1" >
+                <div class="row p-1 pb-0 pe-lg-0 pt-lg-3 align-items-center rounded-3 border shadow-sm">
+                    <table class="table claim-table">
+                        <thead>
+                          <tr class="table-light">
+                            <th scope="col">Claim #</th>
+                            <th scope="col">Task</th>
+                            <th scope="col">Status</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr class="table-danger">
+                            <td><a href="./editClaim.html" target="_blank">5674567890</a></td>
+                            <td>Contact Customer</td>
+                            <td scope="row">                                
+                                <select class="form-select" id="selectTaskStatus" name="selectTaskStatus">
+                                    <option value="open" selected>Open</option>
+                                    <option value="closed">Closed</option>  
+                                </select></td>
+
+                          </tr>
+                          <tr class="table-success">
+                            <td><a href="./editClaim.html" target="_blank">5674567890</a></td>
+                            <td>Fill in details</td>
+                            <td scope="row">                                
+                                <select class="form-select" id="selectTaskStatus" name="selectTaskStatus">
+                                    <option value="open">Open</option>
+                                    <option value="closed" selected>Closed</option>  
+                                </select>
+                            </td>
+
+                          </tr>
+                        </tbody>
+                    </table>
               </div>
             </div>
         <div class="text-center p-4 background-allstate-blue-faded">
